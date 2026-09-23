@@ -1,0 +1,43 @@
+# ============================================================
+# PTA刷题 · 私有仓专用 .gitignore
+# 放在仓库根目录（PTA刷题App/）
+# 三项必排除：密钥库、密码文件、2.6GB 构建环境
+# ============================================================
+
+# ---- 签名密钥库（泄露 = 签名身份泄露，不可撤销）----
+*.jks
+*.keystore
+*.jceks
+*.p12
+
+# ---- 含密码的配置 ----
+local.properties
+secrets.properties
+
+# ---- 本机构建环境（约 2.6GB，可随时重建，不入库）----
+_build_env/
+gradle_home/
+*.log
+
+# ---- Gradle / 构建产物 ----
+.gradle/
+build/
+captures/
+*.apk.tmp
+
+# ---- IDE ----
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# ---- 系统 ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 临时文件 ----
+*.tmp
+*.bak
+~$*

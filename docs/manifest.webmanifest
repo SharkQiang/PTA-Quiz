@@ -1,0 +1,16 @@
+{
+  "name": "PTA刷题",
+  "short_name": "PTA刷题",
+  "description": "CCF PTA 编程培训师资认证（T1）离线刷题工具 · 网页通用版",
+  "lang": "zh-CN",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F7F7F5",
+  "theme_color": "#0C1411",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

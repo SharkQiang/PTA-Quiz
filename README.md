@@ -1,32 +1,83 @@
-# PTA刷题 · Android 版
+# PTA刷题
 
-> **中文版 PTA-T 刷题** —— 面向 CCF PTA 编程培训师资认证（T1）的离线刷题 App。
-> 本仓库是**官方发布仓库（Releases only）**，只提供安装包，**不提供源码**。
+> **中文版 PTA-T 刷题** —— 面向 CCF PTA 编程培训师资认证（T1）的刷题工具。
+> 本仓库是**官方发布仓库**：提供 **Android 安装包** 和 **网页版（手机 / 平板 / 电脑通用）**。
 
 ![版本](https://img.shields.io/badge/version-1.4-brightgreen)
-![平台](https://img.shields.io/badge/platform-Android%208.0%2B-blue)
+![平台](https://img.shields.io/badge/platform-Android%208.0%2B%20%7C%20Web-blue)
 ![语言](https://img.shields.io/badge/language-中文-red)
 
 ---
 
-## 下载安装
+## ⬇️ 怎么用（30 秒看完）
 
-👉 到 **[Releases](https://github.com/SharkQiang/PTA-Quiz/releases)** 页面下载最新版 `PTA-Quiz-vX.Y-signed.apk`
+### 📱 安卓手机 / 平板 → 装 App
+
+# 👉 [**点这里直接下载最新版 APK**](https://github.com/SharkQiang/PTA-Quiz/releases/download/v1.4/PTA-Quiz-v1.4-signed.apk)
+
+> 下载后把 apk 传到手机点开安装即可。**不知道 "Releases" 是什么不用管**，上面这个链接点了就直接开始下载。
+> 所有历史版本在 👉 [Releases 页面](https://github.com/SharkQiang/PTA-Quiz/releases)。
+
+### 🍎 苹果 iPhone / iPad、以及电脑 → 用网页版，**不用安装任何东西**
+
+# 👉 [**点这里直接在浏览器打开网页版**](https://sharkqiang.github.io/PTA-Quiz/)
+
+> 用 **Safari**（iPhone/iPad）或任意浏览器打开上面这个网址就能直接刷题，功能和安卓版一致。
+>
+> **想让它像 App 一样有图标？** 两步搞定：
+> - **iPhone / iPad**：用 Safari 打开 → 点底部「分享」按钮 → 选「**添加到主屏幕**」
+> - **安卓 / 电脑 Chrome**：打开后点右上角菜单 → 选「**安装应用** / 添加到主屏幕」
+
+### 设备 → 方案 对照表
+
+| 你的设备 | 推荐方案 | 要不要安装 | 链接 |
+|---|---|---|---|
+| 安卓手机 / 平板 | 装 App（推荐，可离线） | 要 | [下载 APK](https://github.com/SharkQiang/PTA-Quiz/releases/download/v1.4/PTA-Quiz-v1.4-signed.apk) |
+| **苹果 iPhone / iPad** | **网页版**（无 Mac 也能用） | **不用** | [打开网页版](https://sharkqiang.github.io/PTA-Quiz/) |
+| Windows / Mac 电脑 | 网页版 | 不用 | [打开网页版](https://sharkqiang.github.io/PTA-Quiz/) |
+
+---
+
+## 🌐 网页版是什么、为什么有它
+
+### 它解决什么问题
+
+苹果设备要装原生 App，必须在 Mac 上用 Xcode 打包，还要 99 美元/年的开发者账号、中国的 ICP 备案，个人基本走不通。
+
+所以做了一个**网页版**：打开浏览器就能用，**绕开了 Mac、Apple 账号、App Store 和备案的全部门槛**。iPhone、iPad、安卓平板、电脑都能用，功能与安卓 App 一致。
+
+### 网页版包含什么
+
+- **同样完整的 360 道题**（本地真题 300 + 网络补充 60），不需要另外下载题库
+- 随机刷题 / 每日速记 / 错题本 / 错题重刷 / 题库检索 / 收藏 / 设置 / 成绩统计
+- 浅色 / 深色主题切换
+- **规则与安卓版完全一致**：多选必须全对才得分；错题**永不自动添加**，只有你确认才进错题本；错题**只在「错题重刷」里答对才会移出**
+
+### 网页版的两个注意点
+
+1. **第一次打开需要联网**（把页面缓存下来后，之后离线也能用）。
+2. **刷题记录存在你当前这台设备的浏览器里**，换设备或清除浏览器数据就会丢失——这一点和安卓版一样，两边数据**不互通**。
+
+> 网页版的源文件放在本仓库 [`docs/`](docs/) 目录，由私有仓库的 `Web版/app/` 自动同步生成。
+
+---
+
+## 📦 版本历史
 
 | 版本 | 日期 | 主要变化 | 直接下载 |
 |---|---|---|---|
-| **v1.4** | 2026-09-24 | 新增浅色 / 深色 / 跟随系统外观切换；修复深色模式配色 | [PTA-Quiz-v1.4-signed.apk](https://github.com/SharkQiang/PTA-Quiz/releases/download/v1.4/PTA-Quiz-v1.4-signed.apk) |
+| **v1.4** | 2026-09-24 | 新增浅色 / 深色 / 跟随系统外观切换；修复深色模式配色；**新增网页版** | [APK](https://github.com/SharkQiang/PTA-Quiz/releases/download/v1.4/PTA-Quiz-v1.4-signed.apk) |
 | v1.3 | 2026-09-23 | 修复交互事故（点选项/提交无反应）、检索卷号缺失 | [Releases](https://github.com/SharkQiang/PTA-Quiz/releases) |
 | v1.2 | 2026-09-22 | 按设计稿重做图标 | [Releases](https://github.com/SharkQiang/PTA-Quiz/releases) |
 
-**安装**：把 apk 传到手机 → 点击安装 → 允许「安装未知来源应用」。
-新版本**可直接覆盖安装**，刷题记录、错题本、收藏全部保留。
+**安卓版安装**：把 apk 传到手机 → 点击安装 → 允许「安装未知来源应用」。
+新版本**可直接覆盖安装**，刷题记录、错题本、收藏全部保留（网页版则只需刷新页面）。
 
 ---
 
 ## 这个 App 是什么
 
-一个**纯离线**的 PTA T1 认证刷题工具。不联网、不注册、不收费、无广告，题库直接打包在安装包里。
+一个**纯本地**的 PTA T1 认证刷题工具。不注册、不收费、无广告。
 
 | 功能 | 说明 |
 |---|---|
@@ -35,6 +86,7 @@
 | 错题本 | 按来源筛选；重刷答对自动移出，答错累计次数 |
 | 题库检索 | 关键词 / 卷号 / 分类 / 来源 四维筛选 |
 | 收藏夹 | 星标收藏，随时回看 |
+| 外观 | 浅色 / 深色 / 跟随系统 |
 | 统计 | 总正确率、分类薄弱项、近 7 天趋势 |
 
 **题库规模**
@@ -50,15 +102,18 @@
 
 ## 系统要求
 
-- Android 8.0（API 26）及以上
-- 安装包约 11.5 MB，首次启动自动导入题库
+| | 要求 |
+|---|---|
+| 安卓 App | Android 8.0（API 26）及以上，安装包约 11.5 MB，首次启动自动导入题库 |
+| 网页版 | 任意现代浏览器（Safari / Chrome / Edge 等），无需联网安装 |
 
 ---
 
 ## 关于源码
 
-本仓库**不提供源码**——源码包含官方真题与答案的完整数据，公开分发存在版权风险。
-源码保存在私有仓库中，如需交流请通过 Issue 联系。
+**Kotlin / Android 源码不公开**——源码包含官方真题与答案的完整数据，公开分发存在版权风险。源码保存在私有仓库中，如需交流请通过 Issue 联系。
+
+本仓库的 [`docs/`](docs/) 是可运行的网页版产物（含题库数据），供苹果 / 平板用户直接使用。
 
 ---
 

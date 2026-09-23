@@ -1,0 +1,224 @@
+/* PTA刷题 · 网页通用版 v0.1
+   配色与安卓版 ui/theme/Theme.kt 保持一致，浅色/深色两套变量。 */
+
+:root {
+  --accent: #185FA5;
+  --accent-bg: #E6F1FB;
+  --correct: #3B6D11;
+  --correct-bg: #EAF3DE;
+  --wrong: #A32D2D;
+  --wrong-bg: #FCEBEB;
+  --warn: #854F0B;
+  --warn-bg: #FAEEDA;
+  --bg: #F7F7F5;
+  --surface: #FFFFFF;
+  --surface-2: #F1EFE8;
+  --on-surface: #1C1C1A;
+  --muted: #5F5E5A;
+  --outline: #CFCCC2;
+  --star: #EF9F27;
+}
+
+html[data-theme="dark"] {
+  --accent: #8EC4F0;
+  --accent-bg: #14304A;
+  --correct: #A6D97A;
+  --correct-bg: #22331A;
+  --wrong: #F2A0A0;
+  --wrong-bg: #3A2020;
+  --warn: #E8B96B;
+  --warn-bg: #3A2C12;
+  --bg: #1C1C1A;
+  --surface: #262624;
+  --surface-2: #2C2C2A;
+  --on-surface: #F1EFE8;
+  --muted: #B4B2A9;
+  --outline: #5A5852;
+  --star: #F0B65A;
+}
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg);
+  color: var(--on-surface);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+#app {
+  max-width: 720px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* ---------- 顶栏 ---------- */
+#topbar {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; gap: 8px;
+  padding: 12px 16px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--outline);
+}
+#topbar .brand { flex: 1; min-width: 0; }
+#topbar .title { font-size: 17px; font-weight: 600; }
+#topbar .by { font-size: 12px; color: var(--muted); margin-left: 8px; }
+
+/* ---------- 主体 ---------- */
+#main { flex: 1; padding: 16px; }
+
+.hidden { display: none !important; }
+
+/* ---------- 底部导航 ---------- */
+#tabbar {
+  position: sticky; bottom: 0;
+  display: flex;
+  background: var(--surface);
+  border-top: 1px solid var(--outline);
+}
+#tabbar button {
+  flex: 1; padding: 10px 4px;
+  background: none; border: none; cursor: pointer;
+  font-size: 12px; color: var(--muted);
+  font-family: inherit;
+}
+#tabbar button.active { color: var(--accent); font-weight: 600; }
+
+/* ---------- 通用 ---------- */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--outline);
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+.card.tinted { background: var(--accent-bg); border-color: var(--accent-bg); }
+.card.tinted .t-title { color: var(--accent); }
+.card.tinted .t-body { color: var(--accent); font-weight: 600; }
+
+.section-title {
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-size: 13px; color: var(--muted);
+  margin: 14px 0 8px;
+}
+
+button, .btn {
+  font-family: inherit; font-size: 15px;
+  border-radius: 10px; cursor: pointer;
+  padding: 11px 14px;
+  border: 1px solid var(--outline);
+  background: var(--surface);
+  color: var(--on-surface);
+}
+.btn-primary {
+  background: var(--accent); border-color: var(--accent);
+  color: var(--bg);
+  font-weight: 600;
+}
+html[data-theme="dark"] .btn-primary { color: #0A2E4A; }
+.btn-block { display: block; width: 100%; margin-top: 8px; }
+.btn:disabled, button:disabled { opacity: .4; cursor: not-allowed; }
+
+.row { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.chip {
+  padding: 7px 12px; border-radius: 999px;
+  border: 1px solid var(--outline);
+  background: var(--surface); color: var(--on-surface);
+  font-size: 13px; cursor: pointer; font-family: inherit;
+}
+.chip.on {
+  background: var(--accent-bg); border-color: var(--accent);
+  color: var(--accent); font-weight: 600;
+}
+
+.muted { color: var(--muted); font-size: 13px; }
+.tiny { font-size: 12px; color: var(--muted); }
+
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.stat {
+  background: var(--surface-2); border-radius: 10px; padding: 12px;
+}
+.stat .k { font-size: 12px; color: var(--muted); }
+.stat .v { font-size: 22px; font-weight: 600; margin-top: 2px; }
+
+.progress { height: 6px; background: var(--surface-2); border-radius: 3px; overflow: hidden; margin: 8px 0; }
+.progress > i { display: block; height: 100%; background: var(--accent); }
+
+/* ---------- 题干与选项 ---------- */
+.source-chip {
+  display: inline-block; font-size: 12px;
+  background: var(--accent-bg); color: var(--accent);
+  border-radius: 6px; padding: 2px 8px;
+}
+.stem { font-size: 16px; line-height: 1.7; margin-top: 10px; }
+
+.option {
+  display: flex; align-items: flex-start; gap: 10px;
+  border: 1px solid var(--outline); background: var(--surface);
+  border-radius: 10px; padding: 12px; margin-top: 8px;
+  cursor: pointer; font-size: 15px; line-height: 1.5;
+}
+.option.selected { background: var(--accent-bg); border-color: var(--accent); }
+.option.correct { background: var(--correct-bg); border-color: var(--correct); }
+.option.wrong { background: var(--wrong-bg); border-color: var(--wrong); }
+.option.locked { cursor: default; }
+.option .mark {
+  flex: 0 0 auto; width: 18px; height: 18px; margin-top: 2px;
+  border: 1.5px solid var(--outline); border-radius: 50%;
+}
+.option[data-multi="1"] .mark { border-radius: 4px; }
+.option.selected .mark { border-color: var(--accent); background: var(--accent); }
+.option.correct .mark { border-color: var(--correct); background: var(--correct); }
+.option.wrong .mark { border-color: var(--wrong); background: var(--wrong); }
+
+.panel { border-radius: 12px; padding: 12px; margin-top: 10px; font-size: 14px; }
+.panel.ok { background: var(--correct-bg); }
+.panel.no { background: var(--wrong-bg); }
+.panel .verdict { font-weight: 600; }
+.panel.ok .verdict { color: var(--correct); }
+.panel.no .verdict { color: var(--wrong); }
+
+.hint-box {
+  border: 1px solid var(--outline); border-radius: 12px;
+  padding: 12px; margin-top: 10px; font-size: 14px;
+  background: var(--surface);
+}
+.hint-head { color: var(--accent); cursor: pointer; font-size: 13px; }
+
+.item {
+  background: var(--surface); border: 1px solid var(--outline);
+  border-radius: 12px; padding: 12px; margin-bottom: 10px; cursor: pointer;
+}
+.item .l1 { font-size: 12px; color: var(--accent); }
+.item .l2 { font-size: 14px; margin-top: 6px; }
+.item .l3 { font-size: 12px; color: var(--muted); margin-top: 8px; display: flex; justify-content: space-between; gap: 8px; }
+.item .l3 .danger { color: var(--wrong); }
+
+.empty { text-align: center; color: var(--muted); padding: 40px 0; font-size: 14px; }
+
+.msg { margin-top: 12px; font-size: 13px; color: var(--warn); }
+
+.ask {
+  background: var(--surface-2); border-radius: 12px;
+  padding: 12px; margin-top: 10px;
+}
+
+.dialog-mask {
+  position: fixed; inset: 0; background: rgba(0,0,0,.45);
+  display: flex; align-items: center; justify-content: center; padding: 24px; z-index: 50;
+}
+.dialog {
+  background: var(--surface); border-radius: 14px; padding: 18px;
+  max-width: 420px; width: 100%;
+}
+.dialog h3 { margin: 0 0 8px; font-size: 16px; }
+.dialog .actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 16px; }
+
+footer.about { font-size: 12px; color: var(--muted); text-align: center; padding: 8px 0 20px; }

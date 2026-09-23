@@ -3,7 +3,7 @@
 > **中文版 PTA-T 刷题** —— 面向 CCF PTA 编程培训师资认证（T1）的离线刷题 App。
 > 本仓库是**官方发布仓库（Releases only）**，只提供安装包，**不提供源码**。
 
-![版本](https://img.shields.io/badge/version-1.3-brightgreen)
+![版本](https://img.shields.io/badge/version-1.4-brightgreen)
 ![平台](https://img.shields.io/badge/platform-Android%208.0%2B-blue)
 ![语言](https://img.shields.io/badge/language-中文-red)
 
@@ -15,7 +15,8 @@
 
 | 版本 | 日期 | 主要变化 | 下载 |
 |---|---|---|---|
-| **v1.3** | 2026-09-24 | 修复交互事故（点选项/提交无反应）、检索卷号缺失 | [Releases](../../releases/latest) |
+| **v1.4** | 2026-09-24 | 新增浅色 / 深色 / 跟随系统外观切换；修复深色模式配色 | [Releases](../../releases/latest) |
+| v1.3 | 2026-09-23 | 修复交互事故（点选项/提交无反应）、检索卷号缺失 | [Releases](../../releases) |
 | v1.2 | 2026-09-22 | 按设计稿重做图标 | [Releases](../../releases) |
 
 **安装**：把 apk 传到手机 → 点击安装 → 允许「安装未知来源应用」。

@@ -11,13 +11,13 @@
 
 ## 下载安装
 
-👉 到 **[Releases](../../releases)** 页面下载最新版 `PTA刷题_vX.Y_签名版.apk`
+👉 到 **[Releases](https://github.com/SharkQiang/PTA-Quiz/releases)** 页面下载最新版 `PTA-Quiz-vX.Y-signed.apk`
 
-| 版本 | 日期 | 主要变化 | 下载 |
+| 版本 | 日期 | 主要变化 | 直接下载 |
 |---|---|---|---|
-| **v1.4** | 2026-09-24 | 新增浅色 / 深色 / 跟随系统外观切换；修复深色模式配色 | [Releases](../../releases/latest) |
-| v1.3 | 2026-09-23 | 修复交互事故（点选项/提交无反应）、检索卷号缺失 | [Releases](../../releases) |
-| v1.2 | 2026-09-22 | 按设计稿重做图标 | [Releases](../../releases) |
+| **v1.4** | 2026-09-24 | 新增浅色 / 深色 / 跟随系统外观切换；修复深色模式配色 | [PTA-Quiz-v1.4-signed.apk](https://github.com/SharkQiang/PTA-Quiz/releases/download/v1.4/PTA-Quiz-v1.4-signed.apk) |
+| v1.3 | 2026-09-23 | 修复交互事故（点选项/提交无反应）、检索卷号缺失 | [Releases](https://github.com/SharkQiang/PTA-Quiz/releases) |
+| v1.2 | 2026-09-22 | 按设计稿重做图标 | [Releases](https://github.com/SharkQiang/PTA-Quiz/releases) |
 
 **安装**：把 apk 传到手机 → 点击安装 → 允许「安装未知来源应用」。
 新版本**可直接覆盖安装**，刷题记录、错题本、收藏全部保留。
